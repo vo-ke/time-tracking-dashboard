@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: hsl(226, 43%, 10%);
+}
+.on{
+    @apply text-white;
+}
+
+.box, #fake1, #fake2, #fake3, #fake4, #fake5, #fake6{
+    @apply rounded-2xl w-full;
+}
+.real{
+    @apply rounded-2xl cursor-pointer;
+    background-color: hsl(235, 46%, 20%);
+    @apply z-10 p-7 pb-9 minL:pb-7 -mt-11 relative;
+}
+.real:hover{
+    background-color: hsl(236, 39%, 35%);
+}
+.current{
+  @apply  text-white text-4xl font-light minL:text-5xl;
+}
+.previous{
+   @apply absolute minL:static right-0 top-2 sm2:text-lg text-slate-300 minL:mt-2;
+}
+.ftx{
+    @apply hover:text-white active:text-white ;
+}
+
+#op-real{
+    background-color: hsl(246, 80%, 60%);
+}
+#op-faux{
+    background-color: hsl(235, 46%, 20%);
+}
+#fake1{
+    background-color: hsl(15, 100%, 70%);
+}
+#fake2{
+    background-color: hsl(195, 74%, 62%);
+}
+#fake3{
+    background-color: hsl(348, 100%, 68%);
+}
+#fake4{
+    background-color: hsl(145, 58%, 55%);
+}
+#fake5{
+    background-color: hsl(264, 64%, 52%);
+}
+#fake6{
+    background-color: hsl(43, 84%, 65%);
+}

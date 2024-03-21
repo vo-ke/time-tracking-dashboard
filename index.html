@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS\output.css">
+
+</head>
+<body class="font-main px-2 sm:px-7 py-3 h-screen w-screen minL:flex flex-col justify-center items-center">
+
+<div id="pack" class="my-10 w-full max-h-fit grid grid-cols-1 minL:grid-rows-2 minL:grid-flow-col gap-7 L:max-w-[62.5rem]">
+  <div id="dashboard" class="w-full minL:order-1 rounded-2xl  minL:row-start-1 minL:row-span-2">
+    <div id="op-real" class="z-10 relative rounded-2xl p-7 pb-10 minL:pb-20">
+      <section class="flex flex-row minL:flex-col">
+       <div class="border-white border-0 main:border-4 h-20 w-20 rounded-full"><img src=".\images\image-jeremy.png" alt="alabi potrait" height="80" width="80"></div>
+        <div class="ml-4 sm:ml-5 minL:ml-0 mt-3 minL:mt-11">
+          <h1 class="text-slate-300 minL:text-lg minL:mb-1">Report for</h1>
+          <p class="text-white text-xl sm:text-2xl minL:text-4xl">Jeremy Robson</p>
+        </div>
+      </section>
+    </div>
+    <div id="op-faux" class="z-0 rounded-2xl pl-8 py-5 -mt-9">
+      <section class="grid cursor-pointer grid-cols-3 minL:grid-cols-1 minL:gap-5 text-slate-500 mt-9 text-lg">
+        <div id="dailyremote" class="ftx" onclick="loaddaily()" ontouchstart="loaddaily()">Daily</div>
+        <div id="weeklyremote" class="ftx" onclick="loadweekly()" ontouchstart="loadweekly()">Weekly</div>
+        <div id="monthlyremote" class="ftx" onclick="loadmonthly()" ontouchstart="loadmonthly()">Monthly</div>
+      </section>
+    </div>
+  </div>
+  <!-- 1st box -->
+  <div id="one" class="box minL:order-2">
+    <div id="fake1" class="h-24 ">
+      <img src=".\images\icon-work.svg" alt="work icon" class="float-right z-0">
+    </div>
+    <div class="real">
+      <header class="text-white mb-2 relative font-semibold text-xl"><p>Work</p><img src=".\images\icon-ellipsis.svg" alt="3-dots" class="cursor-pointer absolute top-3 right-0"></header>
+      <section class="relative minL:mt-5 ">
+        <div id="current1" class="current">32hrs</div>
+        <div class="previous" id="portable1"> Last week - 36hrs</div>
+      </section>
+    </div>
+  </div>
+  <!-- 2nd box -->
+  <div id="two" class="box minL:order-4">
+    <div id="fake2" class="h-24 ">
+      <img src=".\images\icon-play.svg" alt="play icon" class="float-right z-0">
+    </div>
+    <div class="real">
+      <header class="text-white mb-2 relative font-semibold text-xl"><p>Play</p><img src=".\images\icon-ellipsis.svg" alt="3-dots" class="cursor-pointer absolute top-3 right-0"></header>
+      <section class="relative minL:mt-5">
+        <div id="current2" class="current">10hrs</div>
+        <div class="previous" id="portable2">Last week - 8hrs</div>
+      </section>
+    </div>
+  </div>
+  <!-- 3rd box -->
+  <div id="three" class="box minL:order-6">
+    <div id="fake3" class="h-24 ">
+      <img src=".\images\icon-study.svg" alt="Study icon" class="float-right z-0">
+    </div>
+    <div class="real">
+      <header class="text-white mb-2 relative font-semibold text-xl"><p>Study</p><img src=".\images\icon-ellipsis.svg" alt="3-dots" class="cursor-pointer absolute top-3 right-0"></header>
+      <section class="relative minL:mt-5">
+        <div id="current3" class="current">4hrs</div>
+        <div class="previous" id="portable3"> Last week - 7hrs</div>
+      </section>
+    </div>
+  </div>
+  <div id="four" class="box minL:order-3">
+    <div id="fake4" class="h-24 ">
+      <img src=".\images\icon-exercise.svg" alt="icon-exercise icon" class=" float-right z-0">
+    </div>
+    <div class="real">
+      <header class="text-white mb-2 relative font-semibold text-xl"><p>Exercise</p><img src=".\images\icon-ellipsis.svg" alt="3-dots" class="cursor-pointer absolute top-3 right-0"></header>
+      <section class="relative minL:mt-5">
+        <div id="current4" class="current">4hrs</div>
+        <div class="previous" id="portable4"> Last week - 5hrs</div>
+      </section>
+    </div>
+  </div>
+  <div id="five" class="box minL:order-5">
+    <div id="fake5" class="h-24 ">
+      <img src=".\images\icon-social.svg" alt="social icon" class=" float-right z-0">
+    </div>
+    <div class="real">
+      <header class="text-white mb-2 relative font-semibold text-xl"><p>Social</p><img src=".\images\icon-ellipsis.svg" alt="3-dots" class="cursor-pointer absolute top-3 right-0"></header>
+      <section class="relative minL:mt-5">
+        <div id="current5" class="current">5hrs</div>
+        <div class="previous" id="portable5"> Last week - 10hrs</div>
+      </section>
+    </div>
+  </div>
+  <div id="six" class="box minL:order-7">
+    <div id="fake6" class="h-24 ">
+      <img src=".\images\icon-self-care.svg" alt="Self Care icon" class="float-right z-0">
+    </div>
+    <div class="real">
+      <header class="text-white mb-2 relative font-semibold text-xl"><p>Self Care</p><img src=".\images\icon-ellipsis.svg" alt="3-dots" class="cursor-pointer absolute top-3 right-0"></header>
+      <section class="relative minL:mt-5">
+        <div id="current6" class="current">2hrs</div>
+        <div class="previous" id="portable6"> Last week - 2hrs</div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="opacity-0 minL:hidden"> sooijjj</div>
+<script src="default.js"></script>
+</body>
+</html>
